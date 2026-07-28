@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MTÜ Väike Tõru</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fffdf7;
+      color: #3a2e1e;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #4caf7d 0%, #2e8b5b 100%);
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1.5rem 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='4' fill='%23ffffff18'/%3E%3C/svg%3E") repeat;
+    }
+    header img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: #fff;
+      border: 4px solid #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,.25);
+      position: relative;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      margin-top: 1rem;
+      position: relative;
+      text-shadow: 0 2px 6px rgba(0,0,0,.2);
+    }
+    header p.tagline {
+      font-size: 1.05rem;
+      opacity: .9;
+      margin-top: .4rem;
+      position: relative;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: #2e8b5b;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: .25rem;
+      padding: .6rem 1rem;
+    }
+    nav a {
+      color: #d4f5e5;
+      text-decoration: none;
+      padding: .4rem 1rem;
+      border-radius: 20px;
+      font-size: .95rem;
+      transition: background .2s;
+    }
+    nav a:hover { background: #1f6b43; color: #fff; }
+
+    /* ── SECTIONS ── */
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+    section + section { padding-top: 0; }
+
+    h2 {
+      font-size: 1.6rem;
+      color: #2e8b5b;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    h2 .icon { font-size: 1.4rem; }
+
+    p { line-height: 1.75; font-size: 1rem; }
+
+    /* ── INTRO ── */
+    .intro-box {
+      background: #eaf7f0;
+      border-left: 5px solid #4caf7d;
+      border-radius: 8px;
+      padding: 1.5rem 1.8rem;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    /* ── ACTIVITIES GRID ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 1.5rem 1.2rem;
+      text-align: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,.08);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 6px 20px rgba(0,0,0,.12); }
+    .card .emoji { font-size: 2.4rem; display: block; margin-bottom: .6rem; }
+    .card h3 { color: #2e8b5b; font-size: 1rem; margin-bottom: .4rem; }
+    .card p { font-size: .88rem; color: #666; }
+
+    /* ── DIVIDER ── */
+    hr {
+      border: none;
+      border-top: 2px dashed #c8ead9;
+      margin: 0 1.5rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #2e8b5b;
+      color: #d4f5e5;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: .9rem;
+    }
+    footer a { color: #a8eccc; }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <img src="images/vaiketoru.jpg" alt="MTÜ Väike Tõru logo" />
+  <h1>MTÜ Väike Tõru</h1>
+  <p class="tagline">Õpime, kasvame ja tegutseme koos!</p>
+</header>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="#meist">Meist</a>
+  <a href="#tegevused">Tegevused</a>
+  <a href="#kontakt">Kontakt</a>
+</nav>
+
+<!-- ── MEIST ── -->
+<section id="meist">
+  <h2><span class="icon">🌱</span> Tere tulemast MTÜ Väike Tõru!</h2>
+  <div class="intro-box">
+    MTÜ Väike Tõru on avalikes huvides tegutsev organisatsioon, mille eesmärgiks on kogukonnale
+    koolituste ja nõustamisteenuste pakkumine. Meie juures saavad pered õppida, kasvada ja
+    veeta koos kvaliteetaega.
+  </div>
+  <p style="margin-top:1.2rem;">
+    Usume, et tugev kogukond sünnib ühistest kogemustest, toetavatest suhetest ja rõõmust koos
+    tegutsemisest. Seetõttu loome võimalusi kohtumiseks, õppimiseks ja inspireerivateks
+    ühistegevusteks igas vanuses peredele.
+  </p>
+</section>
+
+<hr />
+
+<!-- ── TEGEVUSED ── -->
+<section id="tegevused">
+  <h2><span class="icon">🎒</span> Meie tegevused</h2>
+  <div class="grid">
+    <div class="card">
+      <span class="emoji">🏫</span>
+      <h3>Eelkool</h3>
+      <p>Laste kooliks ettevalmistamine mängu ja rõõmu kaudu.</p>
+    </div>
+    <div class="card">
+      <span class="emoji">👨‍👩‍👧</span>
+      <h3>Perekoolitused</h3>
+      <p>Toetavad koolitused lapsevanematele ja peredele.</p>
+    </div>
+    <div class="card">
+      <span class="emoji">🎨</span>
+      <h3>Huviringid</h3>
+      <p>Loovad ja arendavad tegevused lastele ja noortele.</p>
+    </div>
+    <div class="card">
+      <span class="emoji">🎉</span>
+      <h3>Pereüritused</h3>
+      <p>Vahvad kogukondlikud sündmused kogu perele.</p>
+    </div>
+  </div>
+  <p style="margin-top:1.5rem;">
+    Oled oodatud meie tegevustega liituma – olgu selleks eelkool, huviring, koolitus või mõni
+    vahva pereüritus. Iga uus kohtumine aitab kasvatada hoolivat ja ühtehoidvat kogukonda.
+  </p>
+</section>
+
+<hr />
+
+<!-- ── KONTAKT ── -->
+<section id="kontakt">
+  <h2><span class="icon">📬</span> Kontakt</h2>
+  <p>
+    Jälgi meie tegemisi ja tule osalema! Tegevuste, registreerimise ja sündmuste kohta leiad
+    jooksvalt infot meie kodulehelt ja sotsiaalmeediakanalitest.
+  </p>
+  <div style="margin-top:1.5rem; background:#eaf7f0; border-radius:10px; padding:1.2rem 1.5rem; display:inline-block;">
+    <p style="font-weight:700; font-size:1.05rem; color:#2e8b5b;">MTÜ Väike Tõru</p>
+    <p style="margin-top:.4rem;">Keiu Laur</p>
+    <p style="margin-top:.3rem;">Telefon: 56 821 585</p>
+  </div>
+  <p style="margin-top:1.2rem; font-size:1.05rem; font-weight:600; color:#2e8b5b;">
+    Kohtumiseni MTÜ Väike Tõru tegevustes! 🌰
+  </p>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>&copy; 2026 Mittetulundusühing Väike Tõru &mdash; Kõik õigused kaitstud.</p>
+</footer>
+
+</body>
+</html>
